@@ -1,4 +1,4 @@
-Website Sell Fruit Using Framework Spring Boot in Java
+**Website Sell Fruit Using Framework Spring Boot in Java**
 
-Running project in locally
-~~Runing*~~
+_Running project in locally_
+`Download code:https://github.com/xebeto/BTL_LTNC_20202.git`
