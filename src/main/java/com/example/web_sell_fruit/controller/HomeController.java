@@ -11,6 +11,6 @@ public class HomeController {
 
     @RequestMapping("/home")
     public String index() {
-        return "home";
+        return "register";
     }
 }
