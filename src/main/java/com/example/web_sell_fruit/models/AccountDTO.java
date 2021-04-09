@@ -13,7 +13,7 @@ public class AccountDTO extends BaseDTO{
 
     private boolean active;
 
-    private List<String> roles;
+    private List<String> roleEntity;
 
 
     public String getUsername() {
@@ -48,11 +48,11 @@ public class AccountDTO extends BaseDTO{
         this.active = active;
     }
 
-    public List<String> getRoles() {
-        return roles;
+    public List<String> getRoleEntity() {
+        return roleEntity;
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setRoleEntity(List<String> roleEntity) {
+        this.roleEntity = roleEntity;
     }
 }

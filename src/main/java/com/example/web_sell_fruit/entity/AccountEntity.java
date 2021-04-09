@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Account")
+@Table(name = "account")
 public class AccountEntity extends BaseEntity{
     private static final long serialVersionUID = 1L;
 
@@ -21,35 +21,15 @@ public class AccountEntity extends BaseEntity{
     @Column(name = "active")
     private boolean active;
 
-    public String getUsername() {
-        return username;
-    }
+    @ManyToOne
+    @JoinColumn(name = "id_role")
+    private RoleEntity roleuser;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    @OneToOne
+    @JoinColumn(name="id_staff_customer")
+    private StaffEntity staff;
 
-    public String getPassword() {
-        return password;
-    }
+    @OneToOne(mappedBy="account")
+    private CustomerEntity customer;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
 }
