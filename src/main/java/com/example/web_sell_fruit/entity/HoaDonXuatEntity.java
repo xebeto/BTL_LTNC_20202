@@ -25,5 +25,35 @@ public class HoaDonXuatEntity extends  BaseEntity{
     @JoinColumn(name = "ic_hinhthucthanhtoan")
     private HinhThucThanhToanEntity hinhthucthanhtoan;
 
+    public int getTong_tien() {
+        return tong_tien;
+    }
 
+    public void setTong_tien(int tong_tien) {
+        this.tong_tien = tong_tien;
+    }
+
+    public StaffEntity getStaff() {
+        return staff;
+    }
+
+    public void setStaff(StaffEntity staff) {
+        this.staff = staff;
+    }
+
+    public CustomerEntity getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(CustomerEntity customer) {
+        this.customer = customer;
+    }
+
+    public HinhThucThanhToanEntity getHinhthucthanhtoan() {
+        return hinhthucthanhtoan;
+    }
+
+    public void setHinhthucthanhtoan(HinhThucThanhToanEntity hinhthucthanhtoan) {
+        this.hinhthucthanhtoan = hinhthucthanhtoan;
+    }
 }

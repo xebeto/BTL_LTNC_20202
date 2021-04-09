@@ -21,4 +21,27 @@ public class RoleEntity extends BaseEntity {
     @OneToMany(mappedBy="roleuser")
     private List<AccountEntity> account;
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<AccountEntity> getAccount() {
+        return account;
+    }
+
+    public void setAccount(List<AccountEntity> account) {
+        this.account = account;
+    }
 }

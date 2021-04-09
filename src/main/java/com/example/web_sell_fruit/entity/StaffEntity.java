@@ -65,4 +65,12 @@ public class StaffEntity extends BaseEntity{
     public void setAccount(AccountEntity account) {
         this.account = account;
     }
+
+    public List<HoaDonXuatEntity> getHoadonxuat() {
+        return hoadonxuat;
+    }
+
+    public void setHoadonxuat(List<HoaDonXuatEntity> hoadonxuat) {
+        this.hoadonxuat = hoadonxuat;
+    }
 }

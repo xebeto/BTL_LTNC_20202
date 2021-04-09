@@ -22,4 +22,36 @@ public class ProviderEntity extends  BaseEntity{
 
     @ManyToMany(mappedBy = "provider")
     private List<ProductEntity> product;
+
+    public String getName_provider() {
+        return name_provider;
+    }
+
+    public void setName_provider(String name_provider) {
+        this.name_provider = name_provider;
+    }
+
+    public String getAddress_provider() {
+        return address_provider;
+    }
+
+    public void setAddress_provider(String address_provider) {
+        this.address_provider = address_provider;
+    }
+
+    public int getPhone_provider() {
+        return phone_provider;
+    }
+
+    public void setPhone_provider(int phone_provider) {
+        this.phone_provider = phone_provider;
+    }
+
+    public List<ProductEntity> getProduct() {
+        return product;
+    }
+
+    public void setProduct(List<ProductEntity> product) {
+        this.product = product;
+    }
 }

@@ -33,12 +33,14 @@ public class ProductEntity extends  BaseEntity{
     @JoinTable(name = "product_provider", joinColumns = @JoinColumn(name = "id_product"), inverseJoinColumns = @JoinColumn(name = "id_provider"))
     private List<ProviderEntity> provider;
 
+    @OneToMany(mappedBy = "product")
+    private List<ChiTietHoaDonNhapEntity> hoadonnhap;
 
+    @OneToMany(mappedBy = "product")
+    private List<ChiTietHoaDonXuatEntity> hoadonxuat;
 
     @OneToMany(mappedBy="product")
     private List<YeuCauDonHangEntity> yeucaudonhang;
-
-
 
     public String getName_product() {
         return name_product;
@@ -86,5 +88,37 @@ public class ProductEntity extends  BaseEntity{
 
     public void setDonvitinh(DonViTinhEntity donvitinh) {
         this.donvitinh = donvitinh;
+    }
+
+    public List<ProviderEntity> getProvider() {
+        return provider;
+    }
+
+    public void setProvider(List<ProviderEntity> provider) {
+        this.provider = provider;
+    }
+
+    public List<ChiTietHoaDonNhapEntity> getHoadonnhap() {
+        return hoadonnhap;
+    }
+
+    public void setHoadonnhap(List<ChiTietHoaDonNhapEntity> hoadonnhap) {
+        this.hoadonnhap = hoadonnhap;
+    }
+
+    public List<ChiTietHoaDonXuatEntity> getHoadonxuat() {
+        return hoadonxuat;
+    }
+
+    public void setHoadonxuat(List<ChiTietHoaDonXuatEntity> hoadonxuat) {
+        this.hoadonxuat = hoadonxuat;
+    }
+
+    public List<YeuCauDonHangEntity> getYeucaudonhang() {
+        return yeucaudonhang;
+    }
+
+    public void setYeucaudonhang(List<YeuCauDonHangEntity> yeucaudonhang) {
+        this.yeucaudonhang = yeucaudonhang;
     }
 }

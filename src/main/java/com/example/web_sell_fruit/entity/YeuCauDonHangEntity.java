@@ -20,4 +20,27 @@ public class YeuCauDonHangEntity extends BaseEntity{
     @JoinColumn(name = "id_customer")
     private CustomerEntity customer;
 
+    public Boolean getActivity() {
+        return activity;
+    }
+
+    public void setActivity(Boolean activity) {
+        this.activity = activity;
+    }
+
+    public ProductEntity getProduct() {
+        return product;
+    }
+
+    public void setProduct(ProductEntity product) {
+        this.product = product;
+    }
+
+    public CustomerEntity getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(CustomerEntity customer) {
+        this.customer = customer;
+    }
 }

@@ -12,4 +12,11 @@ public class HinhThucThanhToanEntity extends BaseEntity{
     @Column(name = "hinh_thuc")
     private String hinh_thuc;
 
+    public String getHinh_thuc() {
+        return hinh_thuc;
+    }
+
+    public void setHinh_thuc(String hinh_thuc) {
+        this.hinh_thuc = hinh_thuc;
+    }
 }
