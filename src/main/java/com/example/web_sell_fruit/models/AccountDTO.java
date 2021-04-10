@@ -1,7 +1,7 @@
 package com.example.web_sell_fruit.models;
 
 import java.util.List;
-
+// truyền dữ liệu từ controller lên view
 public class AccountDTO extends BaseDTO{
 
 
