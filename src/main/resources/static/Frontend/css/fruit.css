@@ -1,29 +1,29 @@
-.container {
+.container{
     max-width: 1200px;
 }
-
+#in1{
+    border-radius: 20px;
+}
 .menu {
-    background-color: #2A0B0D;
+    background-color:#2A0B0D;
     height: 50px;
-    width: 100%;
-    border-bottom: 2px solid #000;
+    width:100%;
+    border-bottom:2px solid #000;
     margin-bottom: 20px;
     margin-top: 3px;
 }
-
 ul.menu {
     list-style: none;
-    display: flex;
+    display:flex;
     max-width: 991px;
     margin-left: auto;
     margin-right: auto;
 
 }
-
 ul.menu a {
-    color: white;
+    color:white;
     text-decoration: none;
-    font-size: 18px;
+    font-size:18px ;
     display: block;
     padding-top: 11px;
     padding-left: 10px;
@@ -31,8 +31,7 @@ ul.menu a {
     padding-bottom: 19px;
     transition: 0.4s;
 }
-
-ul.menu a:hover {
+ul.menu a:hover{
     color: rgb(129, 54, 66);
     padding-top: 5px;
 
@@ -46,19 +45,24 @@ ul.menu a:hover {
 .container img {
     width: 188px;
     height: 229px;
-    margin-top: 20px;
+    margin-top:20px ;
 }
-
+#image1 :hover img{
+    transform: scale(1.1);
+}
+#image1 :hover {
+    transform: scale(1.1);
+}
 .col {
     width: 216px;
     height: 457px;
-    background-color: #FBF1EE;
+    background-color:#FBF1EE;
     margin-left: 20px;
     border-radius: 1em;
 
 }
 
-.col a h6 {
+.col a h6{
     color: #2A0B0D;
     margin-top: 20px;
     text-decoration: none;
@@ -67,73 +71,63 @@ ul.menu a:hover {
 
 
 }
-
-.col h6 {
+.col h6{
     color: #DC3545;
     text-align: center;
 }
-
-.col button {
+.col button{
     width: 80px;
 }
-
 .add {
     background-color: #DC3333;
     width: 188px;
     height: 44px;
     border-radius: 1em;
-    margin-top: 20px;
+    margin-top:20px ;
 
 }
-
-.add i {
+.add i{
     color: white;
     margin-left: 15px;
     margin-top: 10px;
 }
-
-.add span {
+.add span{
     color: white;
     text-align: center;
 }
-
-.baner {
+.baner{
     margin-top: 100px;
     max-width: 1200px;
     display: flex;
     margin-left: 80px;
 }
-
-.baner img {
+.baner img{
     width: 572px;
     height: 240px;
     border-radius: 1em
 }
-
-.product {
+.product{
     margin-top: 50px;
     width: 1200px;
     display: flex;
     margin-left: 50px;
 }
-
 .product img {
     width: 230px;
     height: 305px;
-    margin-top: 20px;
+    margin-top:20px ;
     margin-left: 15px;
 }
-
 .col1 {
     width: 280px;
     height: 540px;
-    background-color: #FBF1EE;
+    background-color:#FBF1EE;
     margin-left: 40px;
     border-radius: 1em;
 
 }
 
-.col1 a h6 {
+.col1 a h6{
     color: #2A0B0D;
     margin-top: 20px;
     text-decoration: none;
@@ -142,88 +136,75 @@ ul.menu a:hover {
 
 
 }
-
-.col1 h6 {
+.col1 h6{
     color: #DC3545;
     text-align: center;
 }
-
-.col1 button {
+.col1 button{
     width: 80px;
     margin-left: 35px;
 }
-
 .add1 {
     background-color: #DC3333;
     width: 188px;
     height: 44px;
     border-radius: 1em;
-    margin-top: 20px;
+    margin-top:20px ;
     margin-left: 30px;
 
 }
-
-.add1 i {
+.add1 i{
     color: white;
     margin-left: 30px;
     margin-top: 10px;
 }
-
-.add1 span {
+.add1 span{
     color: white;
     text-align: center;
 }
 
-.end1 {
+.end1{
     margin-top: 50px;
     width: 100%;
     height: 105px;
     background-color: #D57E67;
     display: flex;
 }
-
-.vanchuyen {
+.vanchuyen{
     margin-left: 60px;
     margin-top: 40px;
 }
-
-.vanchuyen span {
+.vanchuyen span{
     color: white;
 }
 
-.end2 {
+.end2{
     width: 100%;
     height: 460px;
     background-color: #2A0B0D;
 }
-
-.above {
+.above{
     margin-left: 60px;
     display: flex;
 
 }
-
-.above1 h6 {
+.above1 h6{
     margin-top: 70px;
     color: #777777;
     margin-right: 400px;
 }
-
-.below {
+.below{
     display: flex;
     margin-top: 50px;
 }
-
-.below1 {
+.below1{
     color: white;
     margin-left: 60px;
 }
-
-.below2 {
+.below2{
     color: white;
     margin-left: 120px;
 }
-
-.below p {
+.below p{
     color: #777777;
 }

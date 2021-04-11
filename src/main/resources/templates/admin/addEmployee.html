@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/addProduct.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -46,7 +47,7 @@
                 <div class="" id="sidebar">
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/ListProduct.html">Products</a></li>
-                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/ListUser.html">Customers</a></li>
+                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="#">Customers</a></li>
                         <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/Employee.html">Employees</a></li>
                         <li class="nav-item"><a class="list-group-item list-group-item-action" href="#">Reports</a></li>
 
@@ -80,10 +81,27 @@
     </nav>
 
     <article>
-        <div class="background">
-            <img src="../img/slide2.jpg" alt="">
+        <form action="">
+            <div class="div1">
+                <h3 style="font-size: 17px; text-align: center;"> Add Employee</h3>
+            </div>
+            <div class="div2" style="margin-bottom: 20px;text-align: center;">
+                <input class="in1"  type="number" placeholder="Id">
+                <br>
+                <input class="in1"  type="text" placeholder="Name">
+                <br>
+                <input class="in1"  type="text" style="height: 50px;" placeholder="Address">
+                <br>
+                <input class="in1" type="number" placeholder="ID Card">
+                <br>
 
-        </div>
+                <input class="in1" type="number" placeholder="Bank Account">
+                <br>
+                <button class="in1 in2" type="submit">Add</button>
+                <br>
+            </div>
+        </form>
+
 
 
 

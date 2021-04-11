@@ -1,35 +1,29 @@
-.container {
+.container{
     max-width: 1200px;
 }
-
-.menu ul li {
+.menu ul li{
     list-style-type: none;
     float: left;
     padding: 0px 31px;
 }
-
-.menu a {
+.menu a{
     text-decoration: none;
     color: blueviolet;
-    text-transform: uppercase;
+    text-transform:uppercase ;
     font-weight: 600;
 
 }
-
-.menu a:hover {
+.menu a:hover{
     color: brown;
 }
-
-.menu.sub-menu li {
+.menu.sub-menu li{
     float: none;
     padding: 0px;
 }
-
-.sub-menu {
+.sub-menu{
     display: none;
     padding: 0px;
 }
-
-.item-menu:hover.sub-menu {
+.item-menu:hover.sub-menu{
     display: block;
 }
