@@ -4,6 +4,21 @@ import com.example.web_sell_fruit.models.AccountDTO;
 
 import java.util.List;
 
-public class AccountService {
+public interface AccountService {
 
+    public List<AccountDTO> getlist();
+
+    public AccountDTO getById(int id);
+
+    public AccountDTO getByUsername(String username);
+
+    public AccountDTO getByEmail(String email);
+
+    public AccountDTO getByUsernameOrEmail(String username, String email);
+
+    public AccountDTO getByUsernameAndActive(String username, boolean active);
+
+    public void addOrUpdate(AccountDTO accountDTO);
+
+    public void delete(int id);
 }
