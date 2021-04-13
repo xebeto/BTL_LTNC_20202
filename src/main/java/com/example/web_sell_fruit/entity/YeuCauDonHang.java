@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "yeucaudonhang")
-public class YeuCauDonHangEntity extends BaseEntity{
+public class YeuCauDonHang extends BaseEntity{
 
 
     @Column(name = "activity")
@@ -14,11 +14,11 @@ public class YeuCauDonHangEntity extends BaseEntity{
 
     @ManyToOne()
     @JoinColumn(name = "id_product")
-    private ProductEntity product;
+    private Product product;
 
     @ManyToOne()
     @JoinColumn(name = "id_customer")
-    private CustomerEntity customer;
+    private Customer customer;
 
     public Boolean getActivity() {
         return activity;
@@ -28,19 +28,19 @@ public class YeuCauDonHangEntity extends BaseEntity{
         this.activity = activity;
     }
 
-    public ProductEntity getProduct() {
+    public Product getProduct() {
         return product;
     }
 
-    public void setProduct(ProductEntity product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
-    public CustomerEntity getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(CustomerEntity customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 }

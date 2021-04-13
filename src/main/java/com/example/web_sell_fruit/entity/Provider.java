@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "provider")
-public class ProviderEntity extends  BaseEntity{
+public class Provider extends  BaseEntity{
 
     @Column(name = "name_provider")
     private String name_provider;
@@ -21,7 +21,7 @@ public class ProviderEntity extends  BaseEntity{
     private int phone_provider;
 
     @ManyToMany(mappedBy = "provider")
-    private List<ProductEntity> product;
+    private List<Product> product;
 
     public String getName_provider() {
         return name_provider;
@@ -47,11 +47,11 @@ public class ProviderEntity extends  BaseEntity{
         this.phone_provider = phone_provider;
     }
 
-    public List<ProductEntity> getProduct() {
+    public List<Product> getProduct() {
         return product;
     }
 
-    public void setProduct(List<ProductEntity> product) {
+    public void setProduct(List<Product> product) {
         this.product = product;
     }
 }

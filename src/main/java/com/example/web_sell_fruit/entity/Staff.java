@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "staff")
-public class StaffEntity extends BaseEntity{
+public class Staff extends BaseEntity{
 
     @Column(name = "name_staff")
     private String name_staff;
@@ -21,10 +21,10 @@ public class StaffEntity extends BaseEntity{
     private String address;
 
     @OneToOne(mappedBy="staff")
-    private AccountEntity account;
+    private Account account;
 
     @OneToMany(mappedBy="staff")
-    private List<HoaDonXuatEntity> hoadonxuat;
+    private List<HoaDonXuat> hoadonxuat;
 
     public String getName_staff() {
         return name_staff;
@@ -58,19 +58,19 @@ public class StaffEntity extends BaseEntity{
         this.address = address;
     }
 
-    public AccountEntity getAccount() {
+    public Account getAccount() {
         return account;
     }
 
-    public void setAccount(AccountEntity account) {
+    public void setAccount(Account account) {
         this.account = account;
     }
 
-    public List<HoaDonXuatEntity> getHoadonxuat() {
+    public List<HoaDonXuat> getHoadonxuat() {
         return hoadonxuat;
     }
 
-    public void setHoadonxuat(List<HoaDonXuatEntity> hoadonxuat) {
+    public void setHoadonxuat(List<HoaDonXuat> hoadonxuat) {
         this.hoadonxuat = hoadonxuat;
     }
 }

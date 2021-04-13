@@ -1,24 +1,24 @@
 package com.example.web_sell_fruit.dao;
 
-import com.example.web_sell_fruit.entity.AccountEntity;
+import com.example.web_sell_fruit.entity.Account;
 
 import java.util.List;
 
 public interface AccountDao {
 
-    public List<AccountEntity> getList();
+    public List<Account> getList();
 
-    public AccountEntity getById(int id);
+    public Account getById(int id);
 
-    public AccountEntity getByUsername(String username);
+    public Account getByUsername(String username);
 
-    public AccountEntity getByEmail(String email);
+    public Account getByEmail(String email);
 
-    public AccountEntity getByUsernameOrEmail(String username, String email);
+    public Account getByUsernameOrEmail(String username, String email);
 
-    public AccountEntity getByUsernameAndActive(String username, boolean active);
+    public Account getByUsernameAndActive(String username, boolean active);
 
-    public void addOrUpdate(AccountEntity account);
+    public void addOrUpdate(Account account);
 
     public void delete(int id);
 }

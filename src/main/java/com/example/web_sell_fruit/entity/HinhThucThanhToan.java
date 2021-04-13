@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "hinhthucthanhtoan")
-public class HinhThucThanhToanEntity extends BaseEntity{
+public class HinhThucThanhToan extends BaseEntity{
 
     @Column(name = "hinh_thuc")
     private String hinh_thuc;

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface AccountService {
 
-    public List<AccountDTO> getlist();
+    public List<AccountDTO> getList();
 
     public AccountDTO getById(int id);
 
@@ -20,5 +20,5 @@ public interface AccountService {
 
     public void addOrUpdate(AccountDTO accountDTO);
 
-    public void delete(int id);
+    //public void delete(int id);
 }

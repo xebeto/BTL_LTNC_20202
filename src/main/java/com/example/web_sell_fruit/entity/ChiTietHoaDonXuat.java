@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "chitiethoadonxuat")
-public class ChiTietHoaDonXuatEntity extends BaseEntity{
+public class ChiTietHoaDonXuat extends BaseEntity{
 
     @Column
     private int so_luong;
@@ -14,13 +14,13 @@ public class ChiTietHoaDonXuatEntity extends BaseEntity{
     @ManyToOne
     @MapsId("id_product")
     @JoinColumn(name = "id_product")
-    private ProductEntity product;
+    private Product product;
 
 
     @ManyToOne
     @MapsId("id_hoadonxuat")
     @JoinColumn(name = "id_hoadonxuat")
-    private HoaDonXuatEntity hoadonxuat;
+    private HoaDonXuat hoadonxuat;
 
     public int getSo_luong() {
         return so_luong;
@@ -38,19 +38,19 @@ public class ChiTietHoaDonXuatEntity extends BaseEntity{
         this.gia_ban = gia_ban;
     }
 
-    public ProductEntity getProduct() {
+    public Product getProduct() {
         return product;
     }
 
-    public void setProduct(ProductEntity product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
-    public HoaDonXuatEntity getHoadonxuat() {
+    public HoaDonXuat getHoadonxuat() {
         return hoadonxuat;
     }
 
-    public void setHoadonxuat(HoaDonXuatEntity hoadonxuat) {
+    public void setHoadonxuat(HoaDonXuat hoadonxuat) {
         this.hoadonxuat = hoadonxuat;
     }
 }

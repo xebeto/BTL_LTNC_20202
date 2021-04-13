@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "chitiethoadonnhap")
-public class ChiTietHoaDonNhapEntity extends BaseEntity{
+public class ChiTietHoaDonNhap extends BaseEntity{
 
 
     @Column
@@ -18,13 +18,13 @@ public class ChiTietHoaDonNhapEntity extends BaseEntity{
     @ManyToOne
     @MapsId("id_product")
     @JoinColumn(name = "id_product")
-    private ProductEntity product;
+    private Product product;
 
 
     @ManyToOne
     @MapsId("id_hoadonnhap")
     @JoinColumn(name = "id_hoadonnhap")
-    private HoaDonNhapEntity hoadonnhap;
+    private HoaDonNhap hoadonnhap;
 
     public int getSo_luong() {
         return so_luong;
@@ -50,19 +50,19 @@ public class ChiTietHoaDonNhapEntity extends BaseEntity{
         this.gia_ban = gia_ban;
     }
 
-    public ProductEntity getProduct() {
+    public Product getProduct() {
         return product;
     }
 
-    public void setProduct(ProductEntity product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
-    public HoaDonNhapEntity getHoadonnhap() {
+    public HoaDonNhap getHoadonnhap() {
         return hoadonnhap;
     }
 
-    public void setHoadonnhap(HoaDonNhapEntity hoadonnhap) {
+    public void setHoadonnhap(HoaDonNhap hoadonnhap) {
         this.hoadonnhap = hoadonnhap;
     }
 }

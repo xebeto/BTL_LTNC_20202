@@ -9,13 +9,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "hoadonnhap")
-public class HoaDonNhapEntity extends BaseEntity{
+public class HoaDonNhap extends BaseEntity{
 
     @Column(name = "tong_tien")
     private int tong_tien;
 
     @OneToMany(mappedBy = "hoadonnhap")
-    private List<ChiTietHoaDonNhapEntity> hoadonnhap;
+    private List<ChiTietHoaDonNhap> hoadonnhap;
 
 
     public int getTong_tien() {
@@ -26,11 +26,11 @@ public class HoaDonNhapEntity extends BaseEntity{
         this.tong_tien = tong_tien;
     }
 
-    public List<ChiTietHoaDonNhapEntity> getHoadonnhap() {
+    public List<ChiTietHoaDonNhap> getHoadonnhap() {
         return hoadonnhap;
     }
 
-    public void setHoadonnhap(List<ChiTietHoaDonNhapEntity> hoadonnhap) {
+    public void setHoadonnhap(List<ChiTietHoaDonNhap> hoadonnhap) {
         this.hoadonnhap = hoadonnhap;
     }
 }

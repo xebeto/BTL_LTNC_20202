@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "account")
-public class AccountEntity extends BaseEntity{
+public class Account extends BaseEntity{
     private static final long serialVersionUID = 1L;
 
     @Column(name = "username")
@@ -21,16 +21,19 @@ public class AccountEntity extends BaseEntity{
     @Column(name = "active")
     private boolean active;
 
-    @ManyToOne
-    @JoinColumn(name = "id_role")
-    private RoleEntity roleuser;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "id_account"), inverseJoinColumns = @JoinColumn(name = "id_role"))
+    private List<Role> roles;
 
     @OneToOne
     @JoinColumn(name="id_staff_customer")
-    private StaffEntity staff;
+    private Staff staff;
+
+    @Column(name = "keyvalidate")
+    private String key;
 
     @OneToOne(mappedBy="account")
-    private CustomerEntity customer;
+    private Customer customer;
 
     public String getUsername() {
         return username;
@@ -64,27 +67,35 @@ public class AccountEntity extends BaseEntity{
         this.active = active;
     }
 
-    public RoleEntity getRoleuser() {
-        return roleuser;
+    public List<Role> getRoles() {
+        return roles;
     }
 
-    public void setRoleuser(RoleEntity roleuser) {
-        this.roleuser = roleuser;
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
-    public StaffEntity getStaff() {
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public Staff getStaff() {
         return staff;
     }
 
-    public void setStaff(StaffEntity staff) {
+    public void setStaff(Staff staff) {
         this.staff = staff;
     }
 
-    public CustomerEntity getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(CustomerEntity customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 }

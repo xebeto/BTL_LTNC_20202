@@ -1,18 +1,18 @@
 package com.example.web_sell_fruit.dao;
 
-import com.example.web_sell_fruit.entity.RoleEntity;
+import com.example.web_sell_fruit.entity.Role;
 
 import java.util.List;
 
 public interface RoleDao {
 
-    public List<RoleEntity> getList();
+    public List<Role> getList();
 
-    public RoleEntity getById(int id);
+    public Role getById(int id);
 
-    public RoleEntity getByName(String name);
+    public Role getByName(String name);
 
-    public void addOrUpDate(RoleEntity role);
+    public void addOrUpDate(Role role);
 
     public void delete(int id);
 }

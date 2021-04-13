@@ -2,8 +2,8 @@ package com.example.web_sell_fruit.converter;
 
 
 import com.example.web_sell_fruit.dao.RoleDao;
-import com.example.web_sell_fruit.entity.AccountEntity;
-import com.example.web_sell_fruit.entity.RoleEntity;
+import com.example.web_sell_fruit.entity.Account;
+import com.example.web_sell_fruit.entity.Role;
 import com.example.web_sell_fruit.models.AccountDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class AccountConverter {
     @Autowired
     private RoleDao roleDao;
 
-    public AccountDTO toDTO(AccountEntity account) {
+    public AccountDTO toDTO(Account account) {
         if (account == null)
             return null;
 
@@ -32,30 +32,31 @@ public class AccountConverter {
 
         List<String> roles = new ArrayList<>();
 
-        for (RoleEntity role : account.getRoleuser()) {
+
+        for (Role role : account.getRoles()) {
             String roleString = role.getName();
             roles.add(roleString);
         }
 
-        accountDTO.setRoleEntity(roles);
+        accountDTO.setRoles(roles);
 
         return accountDTO;
     }
 
-    public AccountEntity toEntity(AccountDTO accountDTO) {
+    public Account toEntity(AccountDTO accountDTO) {
         if (accountDTO == null)
             return null;
 
-        AccountEntity account = modelMapper.map(accountDTO, AccountEntity.class);
+        Account account = modelMapper.map(accountDTO, Account.class);
 
-        List<RoleEntity> roles = new ArrayList<>();
+        List<Role> roles = new ArrayList<>();
 
-        for (String roleString : accountDTO.getRoleEntity()) {
-            RoleEntity role = roleDao.getByName(roleString);
+        for (String roleString : accountDTO.getRoles()) {
+            Role role = roleDao.getByName(roleString);
             roles.add(role);
         }
 
-        account.setRoleuser(roles);
+        account.setRoles(roles);
 
         return account;
     }

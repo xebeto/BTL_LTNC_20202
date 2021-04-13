@@ -3,12 +3,11 @@ package com.example.web_sell_fruit.entity;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 
 @Entity
 @Table(name = "roleuser")
-public class RoleEntity extends BaseEntity {
+public class Role extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
@@ -18,8 +17,8 @@ public class RoleEntity extends BaseEntity {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy="roleuser")
-    private List<AccountEntity> account;
+    @ManyToMany(mappedBy = "roles")
+    private List<Account> accounts;
 
     public String getDescription() {
         return description;
@@ -37,11 +36,11 @@ public class RoleEntity extends BaseEntity {
         this.name = name;
     }
 
-    public List<AccountEntity> getAccount() {
-        return account;
+    public List<Account> getAccounts() {
+        return accounts;
     }
 
-    public void setAccount(List<AccountEntity> account) {
-        this.account = account;
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
     }
 }

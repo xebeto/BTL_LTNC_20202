@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name="donvitinh")
-public class DonViTinhEntity extends  BaseEntity{
+public class DonViTinh extends  BaseEntity{
 
     private static final long serialVersionUID = 1L;
 
@@ -15,7 +15,7 @@ public class DonViTinhEntity extends  BaseEntity{
 
 
     @OneToMany(mappedBy = "donvitinh")
-    private List<ProductEntity> product;
+    private List<Product> product;
 
     public String getName_dvt() {
         return name_dvt;
@@ -25,11 +25,11 @@ public class DonViTinhEntity extends  BaseEntity{
         this.name_dvt = name_dvt;
     }
 
-    public List<ProductEntity> getProduct() {
+    public List<Product> getProduct() {
         return product;
     }
 
-    public void setProduct(List<ProductEntity> product) {
+    public void setProduct(List<Product> product) {
         this.product = product;
     }
 }

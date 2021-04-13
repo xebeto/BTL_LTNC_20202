@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name= "customer")
-public class CustomerEntity extends BaseEntity{
+public class Customer extends BaseEntity{
 
     @Column(name="name_customer")
     private String name_customer;
@@ -19,13 +19,13 @@ public class CustomerEntity extends BaseEntity{
 
     @OneToOne
     @JoinColumn(name = "id_user")
-    private AccountEntity account;
+    private Account account;
 
     @OneToMany(mappedBy="customer")
-    private List<HoaDonXuatEntity> hoadonxuat;
+    private List<HoaDonXuat> hoadonxuat;
 
     @OneToMany(mappedBy="customer")
-    private List<YeuCauDonHangEntity> yeucaudonhang;
+    private List<YeuCauDonHang> yeucaudonhang;
 
     public String getName_customer() {
         return name_customer;
@@ -51,27 +51,27 @@ public class CustomerEntity extends BaseEntity{
         this.phone_customer = phone_customer;
     }
 
-    public AccountEntity getAccount() {
+    public Account getAccount() {
         return account;
     }
 
-    public void setAccount(AccountEntity account) {
+    public void setAccount(Account account) {
         this.account = account;
     }
 
-    public List<HoaDonXuatEntity> getHoadonxuat() {
+    public List<HoaDonXuat> getHoadonxuat() {
         return hoadonxuat;
     }
 
-    public void setHoadonxuat(List<HoaDonXuatEntity> hoadonxuat) {
+    public void setHoadonxuat(List<HoaDonXuat> hoadonxuat) {
         this.hoadonxuat = hoadonxuat;
     }
 
-    public List<YeuCauDonHangEntity> getYeucaudonhang() {
+    public List<YeuCauDonHang> getYeucaudonhang() {
         return yeucaudonhang;
     }
 
-    public void setYeucaudonhang(List<YeuCauDonHangEntity> yeucaudonhang) {
+    public void setYeucaudonhang(List<YeuCauDonHang> yeucaudonhang) {
         this.yeucaudonhang = yeucaudonhang;
     }
 }

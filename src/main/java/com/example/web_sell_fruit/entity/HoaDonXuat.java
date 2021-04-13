@@ -2,11 +2,10 @@ package com.example.web_sell_fruit.entity;
 
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "hoadonxuat")
-public class HoaDonXuatEntity extends  BaseEntity{
+public class HoaDonXuat extends  BaseEntity{
 
 
     @Column(name="tong_tien")
@@ -15,15 +14,15 @@ public class HoaDonXuatEntity extends  BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_staff")
-    private StaffEntity staff;
+    private Staff staff;
 
     @ManyToOne
     @JoinColumn(name = "id_customer")
-    private CustomerEntity customer;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "ic_hinhthucthanhtoan")
-    private HinhThucThanhToanEntity hinhthucthanhtoan;
+    private HinhThucThanhToan hinhthucthanhtoan;
 
     public int getTong_tien() {
         return tong_tien;
@@ -33,27 +32,27 @@ public class HoaDonXuatEntity extends  BaseEntity{
         this.tong_tien = tong_tien;
     }
 
-    public StaffEntity getStaff() {
+    public Staff getStaff() {
         return staff;
     }
 
-    public void setStaff(StaffEntity staff) {
+    public void setStaff(Staff staff) {
         this.staff = staff;
     }
 
-    public CustomerEntity getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(CustomerEntity customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
-    public HinhThucThanhToanEntity getHinhthucthanhtoan() {
+    public HinhThucThanhToan getHinhthucthanhtoan() {
         return hinhthucthanhtoan;
     }
 
-    public void setHinhthucthanhtoan(HinhThucThanhToanEntity hinhthucthanhtoan) {
+    public void setHinhthucthanhtoan(HinhThucThanhToan hinhthucthanhtoan) {
         this.hinhthucthanhtoan = hinhthucthanhtoan;
     }
 }

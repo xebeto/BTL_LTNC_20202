@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "product")
-public class ProductEntity extends  BaseEntity{
+public class Product extends  BaseEntity{
     private static final long serialVersionUID = 1L;
 
     @Column(name = "name_product")
@@ -26,21 +26,21 @@ public class ProductEntity extends  BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_dvt")
-    private DonViTinhEntity donvitinh;
+    private DonViTinh donvitinh;
 
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "product_provider", joinColumns = @JoinColumn(name = "id_product"), inverseJoinColumns = @JoinColumn(name = "id_provider"))
-    private List<ProviderEntity> provider;
+    private List<Provider> provider;
 
     @OneToMany(mappedBy = "product")
-    private List<ChiTietHoaDonNhapEntity> hoadonnhap;
+    private List<ChiTietHoaDonNhap> hoadonnhap;
 
     @OneToMany(mappedBy = "product")
-    private List<ChiTietHoaDonXuatEntity> hoadonxuat;
+    private List<ChiTietHoaDonXuat> hoadonxuat;
 
     @OneToMany(mappedBy="product")
-    private List<YeuCauDonHangEntity> yeucaudonhang;
+    private List<YeuCauDonHang> yeucaudonhang;
 
     public String getName_product() {
         return name_product;
@@ -82,43 +82,43 @@ public class ProductEntity extends  BaseEntity{
         this.url_image = url_image;
     }
 
-    public DonViTinhEntity getDonvitinh() {
+    public DonViTinh getDonvitinh() {
         return donvitinh;
     }
 
-    public void setDonvitinh(DonViTinhEntity donvitinh) {
+    public void setDonvitinh(DonViTinh donvitinh) {
         this.donvitinh = donvitinh;
     }
 
-    public List<ProviderEntity> getProvider() {
+    public List<Provider> getProvider() {
         return provider;
     }
 
-    public void setProvider(List<ProviderEntity> provider) {
+    public void setProvider(List<Provider> provider) {
         this.provider = provider;
     }
 
-    public List<ChiTietHoaDonNhapEntity> getHoadonnhap() {
+    public List<ChiTietHoaDonNhap> getHoadonnhap() {
         return hoadonnhap;
     }
 
-    public void setHoadonnhap(List<ChiTietHoaDonNhapEntity> hoadonnhap) {
+    public void setHoadonnhap(List<ChiTietHoaDonNhap> hoadonnhap) {
         this.hoadonnhap = hoadonnhap;
     }
 
-    public List<ChiTietHoaDonXuatEntity> getHoadonxuat() {
+    public List<ChiTietHoaDonXuat> getHoadonxuat() {
         return hoadonxuat;
     }
 
-    public void setHoadonxuat(List<ChiTietHoaDonXuatEntity> hoadonxuat) {
+    public void setHoadonxuat(List<ChiTietHoaDonXuat> hoadonxuat) {
         this.hoadonxuat = hoadonxuat;
     }
 
-    public List<YeuCauDonHangEntity> getYeucaudonhang() {
+    public List<YeuCauDonHang> getYeucaudonhang() {
         return yeucaudonhang;
     }
 
-    public void setYeucaudonhang(List<YeuCauDonHangEntity> yeucaudonhang) {
+    public void setYeucaudonhang(List<YeuCauDonHang> yeucaudonhang) {
         this.yeucaudonhang = yeucaudonhang;
     }
 }
