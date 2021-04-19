@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,22 +21,26 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private AccountService accountService;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    @Transactional
+    public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
 
         AccountDTO accountDTO = accountService.getByUsernameAndActive(username, true);
 
         if(accountDTO == null)
-            throw new UsernameNotFoundException("Account khong ton tai");
+            throw new UsernameNotFoundException("user nof found");
 
-        Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
+        Set<GrantedAuthority> authorities = new HashSet<>();
 
-       for (String role : accountDTO.getRoles()) {
+        for (String role : accountDTO.getRoles()) {
             authorities.add(new SimpleGrantedAuthority(role));
+            System.out.print(authorities);
         }
 
-        User user = new User(accountDTO.getUsername(), accountDTO.getPassword(), authorities);
+        //User user = new User(accountDTO.getUsername(), accountDTO.getPassword(), authorities);
 
-        return user;
+        //return user;
+        //return new org.springframework.security.core.userdetails.User(accountDTO.getUsername(), accountDTO.getPassword(), mapRolesToAuthorities(accountDTO.getRoles()));
+        return new org.springframework.security.core.userdetails.User(accountDTO.getUsername(), accountDTO.getPassword(), authorities);
+
     }
-
 }
