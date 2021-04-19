@@ -20,5 +20,5 @@ public interface AccountService {
 
     public void addOrUpdate(AccountDTO accountDTO);
 
-    //public void delete(int id);
+    public void delete(int id);
 }

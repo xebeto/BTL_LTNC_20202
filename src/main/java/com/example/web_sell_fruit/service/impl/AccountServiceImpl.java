@@ -76,13 +76,13 @@ public class AccountServiceImpl implements AccountService {
         Account account = accountConverter.toEntity(accountDTO);
         accountDao.addOrUpdate(account);
     }
-/*
+
     @Override
     public void delete(int id) {
         Account account = accountDao.getById(id);
-        account.getRoleuser().clear();
+        account.getRoles().clear();
         accountDao.addOrUpdate(account);
 
         accountDao.delete(id);
-    }*/
+    }
 }
