@@ -1,6 +1,8 @@
 package com.example.web_sell_fruit.entity;
 
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -8,6 +10,7 @@ import javax.persistence.Table;
 import java.util.List;
 
 @Entity
+@Data
 @Table(name = "hoadonnhap")
 public class HoaDonNhap extends BaseEntity{
 
@@ -17,20 +20,4 @@ public class HoaDonNhap extends BaseEntity{
     @OneToMany(mappedBy = "hoadonnhap")
     private List<ChiTietHoaDonNhap> hoadonnhap;
 
-
-    public int getTong_tien() {
-        return tong_tien;
-    }
-
-    public void setTong_tien(int tong_tien) {
-        this.tong_tien = tong_tien;
-    }
-
-    public List<ChiTietHoaDonNhap> getHoadonnhap() {
-        return hoadonnhap;
-    }
-
-    public void setHoadonnhap(List<ChiTietHoaDonNhap> hoadonnhap) {
-        this.hoadonnhap = hoadonnhap;
-    }
 }

@@ -58,4 +58,5 @@ public class RoleServiceImpl implements RoleService {
         RoleDTO roleDTO = roleConverter.toDTO(roleDao.getByName(name));
         return roleDTO;
     }
+
 }

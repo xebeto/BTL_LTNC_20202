@@ -27,6 +27,8 @@ public class RegisterController {
     @Autowired
     private AccountService accountService;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private JavaMailSender javaMailSender;
@@ -43,10 +45,9 @@ public class RegisterController {
         AccountDTO account = accountService.getByUsernameOrEmail(accountDTO.getUsername(), accountDTO.getEmail());
 
         if (account == null) {
-            accountDTO.setPassword((accountDTO.getPassword()));
-            accountDTO.setUsername(accountDTO.getUsername());
+            accountDTO.setPassword(passwordEncoder.encode(accountDTO.getPassword()));
             List<String> roles = new ArrayList<String>();
-            roles.add("1");
+            roles.add("User");
             accountDTO.setActive(false);
             accountDTO.setRoles(roles);
 

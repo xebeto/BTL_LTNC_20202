@@ -1,9 +1,12 @@
 package com.example.web_sell_fruit.entity;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "hoadonxuat")
 public class HoaDonXuat extends  BaseEntity{
 
@@ -24,35 +27,4 @@ public class HoaDonXuat extends  BaseEntity{
     @JoinColumn(name = "ic_hinhthucthanhtoan")
     private HinhThucThanhToan hinhthucthanhtoan;
 
-    public int getTong_tien() {
-        return tong_tien;
-    }
-
-    public void setTong_tien(int tong_tien) {
-        this.tong_tien = tong_tien;
-    }
-
-    public Staff getStaff() {
-        return staff;
-    }
-
-    public void setStaff(Staff staff) {
-        this.staff = staff;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public HinhThucThanhToan getHinhthucthanhtoan() {
-        return hinhthucthanhtoan;
-    }
-
-    public void setHinhthucthanhtoan(HinhThucThanhToan hinhthucthanhtoan) {
-        this.hinhthucthanhtoan = hinhthucthanhtoan;
-    }
 }

@@ -1,6 +1,8 @@
 package com.example.web_sell_fruit.entity;
 
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
@@ -8,6 +10,7 @@ import javax.persistence.Table;
 import java.util.List;
 
 @Entity
+@Data
 @Table(name = "provider")
 public class Provider extends  BaseEntity{
 
@@ -23,35 +26,4 @@ public class Provider extends  BaseEntity{
     @ManyToMany(mappedBy = "provider")
     private List<Product> product;
 
-    public String getName_provider() {
-        return name_provider;
-    }
-
-    public void setName_provider(String name_provider) {
-        this.name_provider = name_provider;
-    }
-
-    public String getAddress_provider() {
-        return address_provider;
-    }
-
-    public void setAddress_provider(String address_provider) {
-        this.address_provider = address_provider;
-    }
-
-    public int getPhone_provider() {
-        return phone_provider;
-    }
-
-    public void setPhone_provider(int phone_provider) {
-        this.phone_provider = phone_provider;
-    }
-
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
 }
