@@ -45,4 +45,8 @@ public class Product extends  BaseEntity{
     @OneToMany(mappedBy="product")
     private List<YeuCauDonHang> yeucaudonhang;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
+
 }
