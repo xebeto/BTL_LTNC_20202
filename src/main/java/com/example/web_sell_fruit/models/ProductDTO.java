@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ProductDTO extends BaseDTO{
 
-    private String name_product;
+    private String name;
 
     private int so_luong;
     private int price_near;
@@ -17,12 +17,12 @@ public class ProductDTO extends BaseDTO{
     private List<ChiTietHoaDonNhapDTO> hoadonnhaps;
     private List<YeuCauDonHangDTO> yeucaudonhangs;
 
-    public String getName_product() {
-        return name_product;
+    public String getName() {
+        return name;
     }
 
-    public void setName_product(String name_product) {
-        this.name_product = name_product;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getSo_luong() {

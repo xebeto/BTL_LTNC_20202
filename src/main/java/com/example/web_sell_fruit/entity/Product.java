@@ -12,14 +12,14 @@ import java.util.List;
 public class Product extends  BaseEntity{
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "name_product")
-    private String name_product;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "so_luong")
     private int so_luong;
 
-    @Column(name = "price_near")
-    private int price_near;
+    @Column(name = "price")
+    private int price;
 
     @Column(name = "active")
     private boolean active;

@@ -14,6 +14,7 @@ public class AccountDTO extends BaseDTO{
     private boolean active;
 
     private String key;
+    private String avatar;
 
     private List<String> roles;
 
@@ -63,5 +64,13 @@ public class AccountDTO extends BaseDTO{
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }
