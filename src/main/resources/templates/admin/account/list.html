@@ -64,11 +64,11 @@
                 
                 <tr th:each="account : ${list}">
                   <td th:text="${account.id}"></td>
-                  <td th:text="${account.fullname}"></td>
-                  <td th:text="${account.address}"></td>
-                  <td th:text="${account.phone}"></td>
                   <td th:text="${account.username}"></td>
-                  <td th:text="${account.pw}"></td>
+                  <td th:text="${account.username}"></td>
+                  <td th:text="${account.username}"></td>
+                  <td th:text="${account.username}"></td>
+                  <td th:text="${account.username}"></td>
                   <td th:text="${account.email}"></td>
                   <td th:text="${account.active == true}? #{active}:#{inactive}"></td>
                   <td><p th:each="role : ${account.roles}" th:text="${role}"><p></td>

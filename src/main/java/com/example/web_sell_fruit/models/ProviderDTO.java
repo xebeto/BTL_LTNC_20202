@@ -1,33 +1,48 @@
 package com.example.web_sell_fruit.models;
 
+import java.util.List;
+
 public class ProviderDTO extends BaseDTO{
-    private String Name_provider;
 
-    private String Address_provider;
 
-    private int Number_phone;
+    private String name;
 
-    public String getName_provider() {
-        return Name_provider;
+    private String address;
+
+    private int phone;
+
+    private List<ProductDTO> productDTOs;
+
+
+    public String getName() {
+        return name;
     }
 
-    public void setName_provider(String name_provider) {
-        Name_provider = name_provider;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAddress_provider() {
-        return Address_provider;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddress_provider(String address_provider) {
-        Address_provider = address_provider;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public int getNumber_phone() {
-        return Number_phone;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setNumber_phone(int number_phone) {
-        Number_phone = number_phone;
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public List<ProductDTO> getProductDTOs() {
+        return productDTOs;
+    }
+
+    public void setProductDTOs(List<ProductDTO> productDTOs) {
+        this.productDTOs = productDTOs;
     }
 }

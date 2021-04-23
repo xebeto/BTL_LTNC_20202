@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Quản Lí Vai Trò</title>
+  <title>Quản Lí Danh Mục</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" th:href="@{/Backend/plugins/fontawesome-free/css/all.min.css}">
@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Quản Lý Vai Trò</h1>
+            <h1>Quản Lý Nhà Cung Cấp</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -40,38 +40,36 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><a th:href="@{/admin/QuanLyVaiTro/Them}">Thêm vai trò</a></h3>
+              <h3 class="card-title"><a th:href="@{/admin/QuanLyNhaCungCap/Them}">Thêm danh mục</a></h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Id</th>
-                  <th>Name Role</th>
-                  <th>Description</th>
-                  <th>Created By</th>
-                  <th>Created Date</th>
-                  <th>Modified By</th>
-                  <th>Modified Date</th>
-                  <th>Action</th>
+                  <th th:text="#{id}"></th>
+                  <th>Tên Danh Mục</th>
+                  <th th:text="#{name}" ></th>
+                  <th th:text="#{createdby}"></th>
+                  <th th:text="#{createddate}"></th>
+                  <th th:text="#{modifiedby}"></th>
+                  <th th:text="#{modifieddate}"></th>
+                  <th th:text="#{manipulation}"></th>                 
                 </tr>
                 </thead>
                 <tbody>
                 
                 
-                <tr th:each="role : ${list}">
-                  <td th:text="${role.id}"></td>
-                  <td th:text="${role.name}"></td>
-                  <td th:text="${role.description}"></td>
-                  <td th:text="${role.createdBy}"></td>
-                  <td th:text="${#dates.format(role.createdDate, 'HH:mm dd-MM-yyyy')}"></td>
-                  <td th:text="${role.modifiedBy}"></td>    
-                  <td th:text="${#dates.format(role.modifiedDate, 'HH:mm dd-MM-yyyy')}"></td>
-                  <td> <a th:href="@{'/admin/QuqnLyVaiTro/Sua/' + ${role.id}}">Sửa</a> <a th:href="@{'/admin/QuqnLyVaiTro/Xoa/' + ${role.id}}">Xóa</a>  </td>
-                </tr>  
-                
-                                   
+                <tr th:each="provider : ${list}">
+                  <td th:text="${provider.id}"></td>
+                  <td th:text="${provider.name}"></td>
+                  <td th:text="${provider.phone}"></td>
+                  <td th:text="${provider.createdBy}"></td>
+                  <td th:text="${#dates.format(provider.createdDate, 'HH:mm dd-MM-yyyy')}"></td>
+                  <td th:text="${provider.modifiedBy}"></td>
+                  <td th:text="${#dates.format(provider.modifiedDate, 'HH:mm dd-MM-yyyy')}"></td>
+                  <td> <a th:href="@{'/admin/QuanlyNhaCungCap/Sua/' + ${provider.id}}">Sửa</a> <a th:href="@{'/admin/QuanlyNhaCungCap/Xoa/' + ${provider.id}}">Xóa</a>  </td>
+                </tr>
                </tbody>
                 
               </table>
