@@ -20,12 +20,12 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1>Form Danh Mục/h1>
+							<h1>Form Provider</h1>
 						</div>
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
-								<li class="breadcrumb-item"><a href="#">Tiên Huỳnh</a></li>
-								<li class="breadcrumb-item active">General Form</li>
+								<li class="breadcrumb-item"><a href="#">Thêm</a></li>
+								<li class="breadcrumb-item active">Nhà cung cấp</li>
 							</ol>
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 							
 							<div class="card card-warning">
 								<div class="card-header">
-									<h3 class="card-title">Form Danh Mục</h3>
+									<h3 class="card-title">Form Provider</h3>
 								</div>
 								<!-- /.card-header -->
 								<div class="card-body">
@@ -52,20 +52,28 @@
 											<div class="col-sm-12">
 												<!-- text input -->
 												<div class="form-group">
-													<label>Tên Danh Mục</label> 
+													<label>Tên Nhà cung cấp</label>
 													<input th:field="*{name}" type="text" class="form-control" placeholder="Enter ...">
 												</div>
 											</div>
 										</div>
 										<!-- End-->
-										
+										<div class="row">
+											<div class="col-sm-12">
+												<!-- text input -->
+												<div class="form-group">
+													<label>Địa chỉ nhà cung cấp</label>
+													<input th:field="*{address}" type="text" class="form-control" placeholder="Enter ...">
+												</div>
+											</div>
+										</div>
 										 <!-- Mô tả Sản phẩm -->
 										<div class="row">
 											<div class="col-sm-12">
 												<!-- textarea -->
 												<div class="form-group">
-													<label th:text="#{phone}" ></label>
-													<textarea th:field="*{phone}" class="form-control" rows="3"
+													<label>Số điện thoại</label>
+													<textarea th:field="*{phone}" class="form-control"
 														placeholder="Enter ..."></textarea>
 												</div>
 											</div>
