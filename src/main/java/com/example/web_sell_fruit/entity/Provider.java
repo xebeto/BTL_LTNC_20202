@@ -1,10 +1,7 @@
 package com.example.web_sell_fruit.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -20,8 +17,8 @@ public class Provider extends  BaseEntity{
     @Column(name = "phone_provider")
     private int phone;
 
-    @ManyToMany(mappedBy = "provider")
-    private List<Product> product;
+    @OneToMany(mappedBy = "provider", fetch =  FetchType.LAZY)
+    private List<Product> products;
 
     public String getName() {
         return name;
@@ -47,11 +44,11 @@ public class Provider extends  BaseEntity{
         this.phone = phone;
     }
 
-    public List<Product> getProduct() {
-        return product;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setProduct(List<Product> product) {
-        this.product = product;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

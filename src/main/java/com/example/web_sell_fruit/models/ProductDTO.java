@@ -13,7 +13,7 @@ public class ProductDTO extends BaseDTO{
     private String url_image;
     private String category;
     private boolean active;
-    private List<ProviderDTO> providers;
+    private String provider;
     private List<ChiTietHoaDonNhapDTO> hoadonnhaps;
     private List<YeuCauDonHangDTO> yeucaudonhangs;
 
@@ -24,6 +24,7 @@ public class ProductDTO extends BaseDTO{
     public void setName(String name) {
         this.name = name;
     }
+
 
     public int getSo_luong() {
         return so_luong;
@@ -65,12 +66,12 @@ public class ProductDTO extends BaseDTO{
         this.active = active;
     }
 
-    public List<ProviderDTO> getProviders() {
-        return providers;
+    public String getProvider() {
+        return provider;
     }
 
-    public void setProviders(List<ProviderDTO> providers) {
-        this.providers = providers;
+    public void setProvider(String provider) {
+        this.provider = provider;
     }
 
     public List<ChiTietHoaDonNhapDTO> getHoadonnhaps() {

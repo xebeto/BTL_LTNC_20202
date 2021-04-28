@@ -6,6 +6,7 @@ import com.example.web_sell_fruit.other.ProcessUrlImage;
 import com.example.web_sell_fruit.other.UpLoadFile;
 import com.example.web_sell_fruit.service.CategoryService;
 import com.example.web_sell_fruit.service.ProductService;
+import com.example.web_sell_fruit.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,9 @@ public class ProductController {
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private ProviderService providerService;
 
     @GetMapping(value = "/DanhSach")
     public String listProduct(HttpServletRequest request) {
@@ -43,6 +47,7 @@ public class ProductController {
         ProductDTO productDTO = new ProductDTO();
         model.addAttribute("product", productDTO);
         model.addAttribute("listCategory", categoryService.getList());
+        model.addAttribute("listProvider", providerService.getList());
         return "admin/product/formAdd";
     }
 
@@ -52,6 +57,7 @@ public class ProductController {
         UpLoadFile.saveFile(file, urlImage);
         productDTO.setUrl_image(urlImage);
         productService.addOrUpDate(productDTO);
+        System.out.print(productDTO);
         return "redirect:/admin/QuanLySanPham/DanhSach";
     }
 
@@ -60,6 +66,7 @@ public class ProductController {
         ProductDTO productDTO = productService.getById(id);
         model.addAttribute("product", productDTO);
         model.addAttribute("listCategory", categoryService.getList());
+        model.addAttribute("listProvider", providerService.getList());
         return "admin/product/formUpdate";
     }
 

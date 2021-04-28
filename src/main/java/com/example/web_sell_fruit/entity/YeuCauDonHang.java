@@ -19,9 +19,5 @@ public class YeuCauDonHang extends BaseEntity{
     @JoinColumn(name = "id_product")
     private Product product;
 
-    @ManyToOne()
-    @JoinColumn(name = "id_customer")
-    private Customer customer;
-
 
 }

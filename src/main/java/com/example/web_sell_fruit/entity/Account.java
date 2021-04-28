@@ -26,18 +26,26 @@ public class Account extends BaseEntity{
     @Column(name = "avatar")
     private String avatar;
 
+    @Column(name = "fullname")
+    private String fullname;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "cccd")
+    private String cccd;
+
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "id_account"), inverseJoinColumns = @JoinColumn(name = "id_role"))
     private List<Role> roles;
 
-    @OneToOne(mappedBy="account")
-    private Staff staff;
 
     @Column(name = "keyvalidate")
     private String key;
 
-    @OneToOne(mappedBy="account")
-    private Customer customer;
 
     public String getAvatar() {
         return avatar;
@@ -87,14 +95,6 @@ public class Account extends BaseEntity{
         this.roles = roles;
     }
 
-    public Staff getStaff() {
-        return staff;
-    }
-
-    public void setStaff(Staff staff) {
-        this.staff = staff;
-    }
-
     public String getKey() {
         return key;
     }
@@ -103,11 +103,35 @@ public class Account extends BaseEntity{
         this.key = key;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCccd() {
+        return cccd;
+    }
+
+    public void setCccd(String cccd) {
+        this.cccd = cccd;
     }
 }

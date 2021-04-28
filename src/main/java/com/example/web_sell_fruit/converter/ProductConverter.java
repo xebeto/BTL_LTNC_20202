@@ -3,8 +3,10 @@ package com.example.web_sell_fruit.converter;
 
 import com.example.web_sell_fruit.entity.Category;
 import com.example.web_sell_fruit.entity.Product;
+import com.example.web_sell_fruit.entity.Provider;
 import com.example.web_sell_fruit.models.ProductDTO;
 import com.example.web_sell_fruit.repository.CategoryRepository;
+import com.example.web_sell_fruit.repository.ProviderRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,6 +18,9 @@ public class ProductConverter {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private ProviderRepository providerRepository;
+
     public ProductConverter() {
         modelMapper = new ModelMapper();
     }
@@ -24,6 +29,7 @@ public class ProductConverter {
         ProductDTO productDTO = modelMapper.map(product, ProductDTO.class);
 
         productDTO.setCategory(product.getCategory().getName());
+        productDTO.setProvider(product.getProvider().getName());
 
         return productDTO;
     }
@@ -32,8 +38,10 @@ public class ProductConverter {
         Product product = modelMapper.map(productDTO, Product.class);
 
         Category category = categoryRepository.findByName(productDTO.getCategory());
+        Provider provider = providerRepository.findByName(productDTO.getProvider());
 
         product.setCategory(category);
+        product.setProvider(provider);
 
         return product;
 

@@ -47,15 +47,15 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th th:text="#{id}"></th> 
+                  <th th:text="#{id}"></th>
+                  <th>Hình ảnh</th>
                   <th>Tên Người Dùng</th>
                   <th>Địa Chỉ</th>
                   <th>Số Điện Thoại</th>
                   <th>Tài Khoản</th>
-                  <th>Mật Khẩu</th>
                   <th>Email</th>
-                  <th th:text="#{status}"></th> 
-                  <th>Vai Trò</th>              
+                  <th th:text="#{status}"></th>
+                  <th>Vai Trò</th>
                   <th th:text="#{manipulation}"></th>
                 </tr>
                 </thead>
@@ -64,10 +64,10 @@
                 
                 <tr th:each="account : ${list}">
                   <td th:text="${account.id}"></td>
-                  <td th:text="${account.username}"></td>
-                  <td th:text="${account.username}"></td>
-                  <td th:text="${account.username}"></td>
-                  <td th:text="${account.username}"></td>
+                  <td th:text="${account.avatar}"></td>
+                  <td th:text="${account.fullname}"></td>
+                  <td th:text="${account.address}"></td>
+                  <td th:text="${account.phone}"></td>
                   <td th:text="${account.username}"></td>
                   <td th:text="${account.email}"></td>
                   <td th:text="${account.active == true}? #{active}:#{inactive}"></td>

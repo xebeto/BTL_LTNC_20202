@@ -49,10 +49,8 @@
                 <tr>
                   <th th:text="#{id}"></th> 
                   <th>Tên Người Dùng</th>
-                  <th>Địa Chỉ</th>
-                  <th>Số Điện Thoại</th>
                   <th>Tài Khoản</th>
-                  <th>Mật Khẩu</th>   
+                  <th>Hình ảnh</th>
                   <th>Email</th>                
                 </tr>
                 </thead>
@@ -61,11 +59,9 @@
                 
                 <tr>
                   <td th:text="${account.id}"></td>
-                  <td th:text="${account.fullname}"></td>
-                  <td th:text="${account.address}"></td>
-                  <td th:text="${account.phone}"></td>
+                  <td th:text="${account.key}"></td>
                   <td th:text="${account.username}"></td>
-                  <td th:text="${account.pw}"></td> 
+                  <td th:text="${account.avatar}"></td>
                   <td th:text="${account.email}"></td>               
                 </tr>  
                 

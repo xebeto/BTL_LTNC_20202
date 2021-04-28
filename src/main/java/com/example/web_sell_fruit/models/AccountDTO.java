@@ -4,6 +4,13 @@ import java.util.List;
 // truyền dữ liệu từ controller lên view
 public class AccountDTO extends BaseDTO{
 
+    private String fullname;
+
+    private String address;
+
+    private String phone;
+
+    private String cccd;
 
     private String username;
 
@@ -72,5 +79,37 @@ public class AccountDTO extends BaseDTO{
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCccd() {
+        return cccd;
+    }
+
+    public void setCccd(String cccd) {
+        this.cccd = cccd;
     }
 }

@@ -46,19 +46,19 @@
 								<!-- /.card-header -->
 								<div class="card-body">
 									<form role="form" th:action="@{/admin/QuanLyTaiKhoan/Them}"  th:object="${account}" enctype="multipart/form-data" method="post">
-									
+
 									    <!-- Tên Sản phâm -->
 										<div class="row">
 											<div class="col-sm-12">
 												<!-- text input -->
 												<div class="form-group">
-													<label>Tên Người Dùng</label> 
+													<label>Tên Người Dùng</label>
 													<input th:field="*{fullname}" type="text" class="form-control" placeholder="Enter ...">
 												</div>
 											</div>
 										</div>
 										<!-- End-->
-										
+
 										 <!-- Mô tả Sản phẩm -->
 										<div class="row">
 											<div class="col-sm-12">
@@ -70,7 +70,7 @@
 											</div>
 										</div>
 										 <!-- End-->
-										 
+
 										 <!-- Số điện thoại -->
 										 <div class="row">
 											<div class="col-sm-12">

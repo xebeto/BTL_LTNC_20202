@@ -10,19 +10,29 @@ public class DonViTinh extends  BaseEntity{
 
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "name_dvt")
-    private String name_dvt;
+    @Column(name = "name")
+    private String name;
 
+    @Column(name = "description")
+    private String description;
 
     @OneToMany(mappedBy = "donvitinh")
     private List<Product> product;
 
-    public String getName_dvt() {
-        return name_dvt;
+    public String getName() {
+        return name;
     }
 
-    public void setName_dvt(String name_dvt) {
-        this.name_dvt = name_dvt;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Product> getProduct() {

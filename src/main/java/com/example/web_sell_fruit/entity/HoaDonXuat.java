@@ -14,15 +14,6 @@ public class HoaDonXuat extends  BaseEntity{
     @Column(name="tong_tien")
     private int tong_tien;
 
-
-    @ManyToOne
-    @JoinColumn(name = "id_staff")
-    private Staff staff;
-
-    @ManyToOne
-    @JoinColumn(name = "id_customer")
-    private Customer customer;
-
     @ManyToOne
     @JoinColumn(name = "ic_hinhthucthanhtoan")
     private HinhThucThanhToan hinhthucthanhtoan;

@@ -28,7 +28,7 @@ public class ProviderConverter {
     public ProviderDTO toDTO(Provider provider) {
         ProviderDTO providerDTO = modelMapper.map(provider, ProviderDTO.class);
 
-        List<Product> products = provider.getProduct();
+        List<Product> products = provider.getProducts();
         List<ProductDTO> productDTOs = new ArrayList<>();
 
         for (Product product : products) {

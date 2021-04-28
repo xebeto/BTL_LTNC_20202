@@ -60,16 +60,14 @@
 										</div>
 										<!-- End-->
 										
-										 <!-- Mô tả Sản phẩm -->
-										<div class="row">
-											<div class="col-sm-12">
-												<!-- textarea -->
-												<div class="form-group">
-													<label th:text="#{description}"></label>
-													<textarea th:field="*{description}" class="form-control" rows="3"
-														placeholder="Enter ..."></textarea>
-												</div>
-											</div>
+										 <!-- Số lượng Sản phẩm -->
+										<div class="form-group">
+											<label class="col-form-label" for="inputSuccess">
+												<i class="fas fa-check"></i> Số lượng
+											</label>
+											<input th:field="*{so_luong}" type="text"
+												   class="form-control is-valid" id="inputSuccess"
+												   placeholder="Enter ..." >
 										</div>
 										 <!-- End-->
 
@@ -78,7 +76,7 @@
 											<label class="col-form-label" for="inputSuccess">
 											<i class="fas fa-check"></i> Giá Sản Phẩm
 											</label> 
-												<input th:field="*{price}" type="text"
+												<input th:field="*{price_near}" type="text"
 												class="form-control is-valid" id="inputSuccess"
 												placeholder="Enter ..." >
 										</div>
@@ -110,6 +108,17 @@
 													<label>Danh Mục</label> 
 													<select class="form-control" th:field="*{category}"  >
 														<option th:each="category1 : ${listCategory}" th:text="${category1.name}" th:value="${category1.name}"></option>												
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<!-- select -->
+												<div class="form-group">
+													<label>Nhà cung cấp</label>
+													<select class="form-control" th:field="*{provider}"  >
+														<option th:each="provider1 : ${listProvider}" th:text="${provider1.name}" th:value="${provider1.name}"></option>
 													</select>
 												</div>
 											</div>
