@@ -36,7 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
-    // xét quyền cho từng trang web
+    // xét quyền cho các API
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
