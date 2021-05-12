@@ -7,6 +7,7 @@ import com.example.web_sell_fruit.other.UpLoadFile;
 import com.example.web_sell_fruit.service.CategoryService;
 import com.example.web_sell_fruit.service.ProductService;
 import com.example.web_sell_fruit.service.ProviderService;
+import com.example.web_sell_fruit.service.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +29,9 @@ public class ProductController {
     @Autowired
     private ProviderService providerService;
 
+    @Autowired
+    private UnitService unitService;
+
     @GetMapping(value = "/DanhSach")
     public String listProduct(HttpServletRequest request) {
         List<ProductDTO> listProductDTOs = productService.getList();
@@ -48,6 +52,7 @@ public class ProductController {
         model.addAttribute("product", productDTO);
         model.addAttribute("listCategory", categoryService.getList());
         model.addAttribute("listProvider", providerService.getList());
+        model.addAttribute("listUnit", unitService.getList());
         return "admin/product/formAdd";
     }
 
@@ -67,6 +72,7 @@ public class ProductController {
         model.addAttribute("product", productDTO);
         model.addAttribute("listCategory", categoryService.getList());
         model.addAttribute("listProvider", providerService.getList());
+        model.addAttribute("listUnit", unitService.getList());
         return "admin/product/formUpdate";
     }
 

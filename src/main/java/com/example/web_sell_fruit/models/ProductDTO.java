@@ -9,11 +9,19 @@ public class ProductDTO extends BaseDTO{
     private String name;
 
     private int so_luong;
-    private int price_near;
+
+    private int price;
+
     private String url_image;
+
     private String category;
+
+    private String unit;
+
     private boolean active;
+
     private String provider;
+
     private List<ChiTietHoaDonNhapDTO> hoadonnhaps;
     private List<YeuCauDonHangDTO> yeucaudonhangs;
 
@@ -25,6 +33,13 @@ public class ProductDTO extends BaseDTO{
         this.name = name;
     }
 
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
 
     public int getSo_luong() {
         return so_luong;
@@ -34,12 +49,12 @@ public class ProductDTO extends BaseDTO{
         this.so_luong = so_luong;
     }
 
-    public int getPrice_near() {
-        return price_near;
+    public int getPrice() {
+        return price;
     }
 
-    public void setPrice_near(int price_near) {
-        this.price_near = price_near;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getUrl_image() {

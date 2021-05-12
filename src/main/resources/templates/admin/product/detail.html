@@ -52,6 +52,8 @@
                                     <th>Giá</th>
                                     <th th:text="#{status}"></th>
                                     <th>Nhà cung cấp</th>
+                                    <th>Đơn Vị Tính</th>
+
 
                                 </tr>
                                 </thead>
@@ -61,9 +63,10 @@
                                 <tr>
                                     <td th:text="${product.id}"></td>
                                     <td th:text="${product.name}"></td>
-                                    <td th:text="${#numbers.formatCurrency(product.price_near)}"></td>
+                                    <td th:text="${#numbers.formatCurrency(product.price)}"></td>
                                     <td th:text="${product.active}"></td>
                                     <td th:text="${product.provider}"></td>
+                                    <td th:text="${product.unit}"></td>
                                 </tr>
 
 

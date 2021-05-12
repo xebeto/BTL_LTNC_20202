@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-
 @Controller
-@RequestMapping(value = "/register/Email")
+@RequestMapping(value = "/admin/Email")
 public class EmailController {
+
     @Autowired
     private SimpleMailSender simpleMailSender;
 
@@ -27,7 +27,7 @@ public class EmailController {
     public String home(HttpServletRequest request) {
         List<AccountDTO> accountDTOs = accountService.getList();
         request.setAttribute("accounts", accountDTOs);
-        return "/home";
+        return "admin/email/home";
     }
 
     @PostMapping(value = "/send")
@@ -39,6 +39,7 @@ public class EmailController {
             simpleMailSender.send(email, subject, text);
         }
 
-        return "redirect:/home";
+        return "redirect:/admin/Email/home";
     }
+
 }

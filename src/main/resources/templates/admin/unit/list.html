@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Quản Lí Sản Phẩm</title>
+  <title>Quản Lí Danh Mục</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" th:href="@{/Backend/plugins/fontawesome-free/css/all.min.css}">
@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Quản Lý Sản Phẩm</h1>
+            <h1>Quản Lý Danh Mục</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -40,44 +40,43 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><a th:href="@{/admin/QuanLySanPham/Them}">Thêm sản phẩm</a></h3>
-             
+              <h3 class="card-title"><a th:href="@{/admin/QuanLyDonViTinh/Them}">Thêm danh mục</a></h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Id</th>
-                  <th>Tên Sản Phẩm</th>
-                  <th>Giá</th>
-                  <th>Danh Mục</th>
-                  <th>ĐVT</th>
-                  <th th:text="#{status}"></th>
-                  <th th:text="#{manipulation}"></th>
+                  <th th:text="#{id}"></th>
+                  <th>Tên đơn vị tính</th>
+                  <th th:text="#{description}" ></th>
+                  <th th:text="#{createdby}"></th>
+                  <th th:text="#{createddate}"></th>
+                  <th th:text="#{modifiedby}"></th>
+                  <th th:text="#{modifieddate}"></th>
+                  <th th:text="#{manipulation}"></th>                 
                 </tr>
                 </thead>
                 <tbody>
                 
                 
-                <tr th:each="product : ${list}">
-                  <td th:text="${product.id}"></td>
-                  <td th:text="${product.name}"></td>
-                  <td th:text="${#numbers.formatCurrency(product.price)}"></td>
-                  <td th:text="${product.category}"></td>
-                  <td th:text="${product.unit}"></td>
-                  <td th:text="${product.active}"></td>
-                  <td>
-                     <a th:href="@{'/admin/QuanLySanPham/ChiTiet/' + ${product.id} }">Chi tiết</a>
-                     <a th:href="@{'/admin/QuanLySanPham/Sua/' + ${product.id} }" >Sửa</a>
-                     <a th:href="@{'/admin/QuanLySanPham/Xoa/' + ${product.id} }">Xóa</a>
-                  </td>
+                <tr th:each="unit : ${list}">
+                  <td th:text="${unit.id}"></td>
+                  <td th:text="${unit.name}"></td>
+                  <td th:text="${unit.description}"></td>
+                  <td th:text="${unit.createdBy}"></td>
+                  <td th:text="${#dates.format(unit.createdDate, 'HH:mm dd-MM-yyyy')}"></td>
+                  <td th:text="${unit.modifiedBy}"></td>
+                  <td th:text="${#dates.format(unit.modifiedDate, 'HH:mm dd-MM-yyyy')}"></td>
+                  <td> <a th:href="@{'/admin/QuanLyDonViTinh/Sua/' + ${unit.id}}">Sửa</a> <a th:href="@{'/admin/QuanLyDonViTinh/Xoa/' + ${unit.id}}">Xóa</a>  </td>
                 </tr>  
                 
                                    
                </tbody>
                 
               </table>
+              
+              
             </div>
  
           </div>
@@ -87,7 +86,7 @@
       </div>
 
     </section>
-    
+
   </div>
   
   

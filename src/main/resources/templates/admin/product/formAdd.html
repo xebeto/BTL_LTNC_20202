@@ -75,7 +75,7 @@
 											<label class="col-form-label" for="inputSuccess">
 											<i class="fas fa-check"></i> Giá Sản Phẩm
 											</label> 
-												<input th:field="*{price_near}" type="text"
+												<input th:field="*{price}" type="text"
 												class="form-control is-valid" id="inputSuccess"
 												placeholder="Enter ..." >
 										</div>
@@ -119,6 +119,18 @@
 													<label>Nhà cung cấp</label>
 													<select class="form-control" th:field="*{provider}">
 														<option th:each="provider1 : ${listProvider}" th:text="${provider1.name}" th:value="${provider1.name}"></option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-sm-12">
+												<!-- select -->
+												<div class="form-group">
+													<label>Đơn Vị Tính</label>
+													<select class="form-control" th:field="*{unit}">
+														<option th:each="unit1 : ${listUnit}" th:text="${unit1.name}" th:value="${unit1.name}"></option>
 													</select>
 												</div>
 											</div>

@@ -4,9 +4,11 @@ package com.example.web_sell_fruit.converter;
 import com.example.web_sell_fruit.entity.Category;
 import com.example.web_sell_fruit.entity.Product;
 import com.example.web_sell_fruit.entity.Provider;
+import com.example.web_sell_fruit.entity.Unit;
 import com.example.web_sell_fruit.models.ProductDTO;
 import com.example.web_sell_fruit.repository.CategoryRepository;
 import com.example.web_sell_fruit.repository.ProviderRepository;
+import com.example.web_sell_fruit.repository.UnitRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,6 +22,8 @@ public class ProductConverter {
 
     @Autowired
     private ProviderRepository providerRepository;
+    @Autowired
+    private UnitRepository unitRepository;
 
     public ProductConverter() {
         modelMapper = new ModelMapper();
@@ -30,6 +34,7 @@ public class ProductConverter {
 
         productDTO.setCategory(product.getCategory().getName());
         productDTO.setProvider(product.getProvider().getName());
+        productDTO.setUnit(product.getUnit().getName());
 
         return productDTO;
     }
@@ -39,9 +44,11 @@ public class ProductConverter {
 
         Category category = categoryRepository.findByName(productDTO.getCategory());
         Provider provider = providerRepository.findByName(productDTO.getProvider());
+        Unit unit = unitRepository.findByName(productDTO.getUnit());
 
         product.setCategory(category);
         product.setProvider(provider);
+        product.setUnit(unit);
 
         return product;
 
