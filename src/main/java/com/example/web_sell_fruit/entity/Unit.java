@@ -5,8 +5,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="donvitinh")
-public class DonViTinh extends  BaseEntity{
+@Table(name="unit")
+public class Unit extends  BaseEntity{
 
     private static final long serialVersionUID = 1L;
 
@@ -16,7 +16,7 @@ public class DonViTinh extends  BaseEntity{
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "donvitinh")
+    @OneToMany(mappedBy = "unit")
     private List<Product> product;
 
     public String getName() {

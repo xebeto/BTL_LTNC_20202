@@ -1,8 +1,6 @@
 package com.example.web_sell_fruit.entity;
 
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -28,7 +26,7 @@ public class Product extends  BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_dvt")
-    private DonViTinh donvitinh;
+    private Unit unit;
 
     @ManyToOne
     @JoinColumn(name = "id_provider")
@@ -87,12 +85,12 @@ public class Product extends  BaseEntity{
         this.url_image = url_image;
     }
 
-    public DonViTinh getDonvitinh() {
-        return donvitinh;
+    public Unit getUnit() {
+        return unit;
     }
 
-    public void setDonvitinh(DonViTinh donvitinh) {
-        this.donvitinh = donvitinh;
+    public void setUnit(Unit unit) {
+        this.unit = unit;
     }
 
     public Provider getProvider() {
