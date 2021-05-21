@@ -27,6 +27,7 @@ public class CartController {
     @GetMapping(value = "/view")
     public String viewCart(HttpServletRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        request.setAttribute("authentication",authentication.getName());
         TableOrderDTO tableOrderDTO = tableOrderService.getByAccountUsernameAndActive(authentication.getName(), false);
 
         if (tableOrderDTO == null) {
@@ -34,6 +35,7 @@ public class CartController {
         }
 
         request.setAttribute("order", tableOrderDTO);
+
         return "cart/view";
     }
 
@@ -65,11 +67,14 @@ public class CartController {
     @GetMapping(value = "/reduce/{idProductOrder}")
     public String reduceCart(HttpServletRequest request, @PathVariable("idProductOrder") int idProductOrder) {
         cartService.reduceCart(idProductOrder);
+
         return "redirect:/cart/view";
     }
 
     @GetMapping(value = "/buy")
     public String buyCart(HttpServletRequest request) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        request.setAttribute("authentication",authentication.getName());
         TableOrderDTO tableOrderDTO = tableOrderService
                 .getByAccountUsernameAndActive(SecurityContextHolder.getContext().getAuthentication().getName(), false);
         tableOrderDTO.setActive(true);
