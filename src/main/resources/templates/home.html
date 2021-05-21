@@ -18,6 +18,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link th:href="@{/Frontend/css/bootstrap.min.css}" rel="stylesheet">
 	<link th:href="@{/Frontend/css/font-awesome.min.css}" rel="stylesheet">
 	<link th:href="@{/Frontend/css/prettyPhoto.css}" rel="stylesheet">
@@ -33,7 +36,7 @@
 <div th:replace="common/slider :: slider"></div>
 
 
-<section>
+<section th:action="@{/home}" method="post">
     <div class="container">
         <div class="col-sm-12">
             <div th:replace="common/menu :: menu"></div>
@@ -49,14 +52,14 @@
                         <option value="1">Giá từ cao tới thấp</option>
 
                     </select> <br/>
-                    <div id="result">
-                        <div class="row" style="display: flex">
+                    <div id="result" >
+                        <div class="row" style="display: flex ">
                         <div th:each="product : ${listProduct}" class="col-sm-4">
                             <div class="product-image-wrapper">
-                                <div class="single-products">
+                                <div class="single-products" >
                                     <div class="productinfo text-center">
-                                        <img th:src="@{'/images/' + ${product.url_image} }"
-                                             alt="Khong hien hinh anh" />
+                                        <img th:src="@{'/images/' + ${product.url_image}  }"
+                                             alt="Khong hien hinh anh">
                                         <!-- <h2 th:text="${product.price}"></h2> -->
                                         <h2 th:text="${#numbers.formatCurrency(product.price)}">
                                         </h2>

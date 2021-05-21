@@ -21,13 +21,13 @@
     <link rel="apple-touch-icon-precomposed" th:href="@{/Frontend/images/ico/apple-touch-icon-57-precomposed.png}">
 </head><!--/head-->
 <body>
-<!--    <div th:replace="common/header :: header"></div>-->
+    <div th:replace="common/header :: header"></div>
     
     <section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
+				  <li><a th:href="@{/home}">Home</a></li>
 				  <li class="active">Check out</li>
 				</ol>
 			</div><!--/breadcrums-->

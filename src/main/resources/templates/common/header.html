@@ -40,6 +40,7 @@
 								<li><a th:href="@{/cart/view}"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
 								<li th:if="${authentication != null}">
+
 									<a href=""><i class="fa fa-user">Tài khoản:<span th:text="${authentication}"></span>  </i></a></li>
 							    <li th:if="${authentication != null}"><a th:href="@{/logout}">Logout</a></li>						
 							</ul>
@@ -65,7 +66,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Trang Chủ</a></li>
+								<li><a th:href="@{/home}" class="active">Trang Chủ</a></li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">TRÁI CÂY TƯƠI</a>
 									<div class="dropdown-menu">
