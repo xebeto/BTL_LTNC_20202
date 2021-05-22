@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-md-4 clearfix">
 						<div class="logo pull-left">
-							<a href="index.html"><img th:src="@{Frontend/images/home/logo.png}" alt="" /></a>
+							<a href="index.html"><img th:src="@{/images/logodesktop.jpg}" alt="" /></a>
 						</div>						
 					</div>
 					<div class="col-md-8 clearfix">
@@ -39,10 +39,26 @@
 										
 								<li><a th:href="@{/cart/view}"><i class="fa fa-shopping-cart"></i>
 										Cart</a></li>
-								<li th:if="${authentication != null}">
+								<li th:if="${authentication != null}" class="dropdown">
 
-									<a href=""><i class="fa fa-user">Tài khoản:<span th:text="${authentication}"></span>  </i></a></li>
-							    <li th:if="${authentication != null}"><a th:href="@{/logout}">Logout</a></li>						
+									<i class="fa fa-user" data-toggle="dropdown"><span th:text="${authentication}">
+
+									</span>
+										<span class="caret"></span>
+									</i>
+
+
+											<ul class="dropdown-menu">
+
+												<li >Thông tin tài khoản</li>
+												<li><a href="" th:href="@{/admin}">Login Quản lý</a></li>
+
+											</ul>
+
+
+									</li>
+
+								<li th:if="${authentication != null}"><a th:href="@{/logout}">Logout</a></li>
 							</ul>
 						</div>
 					</div>
