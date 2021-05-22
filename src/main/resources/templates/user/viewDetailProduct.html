@@ -121,9 +121,9 @@
 										<li><a href=""><i class="fa fa-user" th:text="${product.createdBy}"></i></a></li>
 										<li><a href=""><i class="fa fa-clock-o"  th:text="${#dates.format(product.createdDate, 'HH:mm')}"></i></a></li>
 										<li><a href=""><i class="fa fa-clock-o"  th:text="${#dates.format(product.createdDate, 'dd-MM-yyyy')}"></i></a></li>
-										
+
 									</ul>
-									<p th:text="${product.description}"></p>
+									<p th:text="${product.name}"></p>
 									<p><b>Nhận xét</b></p>
 									
 									<form action="#">
@@ -142,13 +142,13 @@
 							
 						</div>
 					</div><!--/category-tab-->
-					
+
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">recommended items</h2>
-						
+
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-								<div class="item active">	
+								<div class="item active">
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
@@ -186,7 +186,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="item">	
+								<div class="item">
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
@@ -230,7 +230,7 @@
 							  </a>
 							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
 								<i class="fa fa-angle-right"></i>
-							  </a>			
+							  </a>
 						</div>
 					</div><!--/recommended_items-->
 					
@@ -238,7 +238,7 @@
 			</div>
 		</div>
 	</section>
-	
+	<div th:replace="common/footer :: footer"></div>
 	
 	
 

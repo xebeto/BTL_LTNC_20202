@@ -62,8 +62,9 @@
                                              alt="Khong hien hinh anh">
                                         <!-- <h2 th:text="${product.price}"></h2> -->
                                         <h2 th:text="${#numbers.formatCurrency(product.price)}">
-                                        </h2>
-                                        <p th:text="${product.name}"></p>
+                                        </h2><h4 th:text="${product.name}"></h4>
+<!--                                        <p th:text="${product.name}"></p>-->
+
                                         <a href="#" class="btn btn-default add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
@@ -85,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-<!--                        <div class="phantrang" style="text-align: center; padding-top: 20px">-->
+                        <div class="phantrang" style="text-align: center; padding-top: 20px">
                             <ul class="pagination">
                                 <li th:class=" ${page == 1}?'active':'' "><a
                                         th:href="@{/home/pages?page=1}">1</a></li>
@@ -96,7 +97,7 @@
                                 <li th:class="${page > 3}?'active':''"><a
                                         th:href="@{/home/pages(page=${page+1})}"> &raquo; </a></li>
                             </ul>
-<!--                        </div>-->
+                        </div>
                     <!--features_items-->
                 </div>
             </div>

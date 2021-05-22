@@ -39,7 +39,8 @@
 					<thead>
 						<tr class="cart_menu">
 							<td class="image">Sản Phẩm</td>
-							<td class="description"></td>
+							<td class="description">Tên</td>
+							<td class="description">Đơn vị</td>
 							<td class="price">Giá</td>
 							<td class="quantity">Số Lượng</td>
 							<td class="total">Tổng Tiền</td>
@@ -55,6 +56,10 @@
 							
 							<td class="cart_description">
 								<h4 th:text="${productOrderDTO.productDTO.name}"></h4>
+								<p></p>
+							</td>
+							<td class="cart_description">
+								<h4 th:text="${productOrderDTO.productDTO.unit}"></h4>
 								<p></p>
 							</td>
 							<td class="cart_price">
