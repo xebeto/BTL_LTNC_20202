@@ -35,7 +35,7 @@ public class HomeController {
 
         int page = 1;
         request.setAttribute("page", page);
-        List<ProductDTO> productDTOs = productService.getList();
+        List<ProductDTO> productDTOs = productService.getList(page,12);
         request.setAttribute("listProduct", productDTOs);
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -51,7 +51,7 @@ public class HomeController {
         List<CategoryDTO> categoryDTOs = categoryService.getList();
         request.setAttribute("listCategory", categoryDTOs);
 
-        List<ProductDTO> productDTOs = productService.getList(page,15);
+        List<ProductDTO> productDTOs = productService.getList(page,12);
         request.setAttribute("listProduct", productDTOs);
 
 

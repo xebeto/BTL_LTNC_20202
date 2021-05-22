@@ -85,127 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-<!--                    <div id="result">-->
-<!--                        <div class="row" style="display: flex">-->
-<!--                            <div th:each="product : ${listProduct}" class="col" style="padding-top: 40px">-->
-<!--                                <img th:src="@{'/images/' + ${product.url_image} }"-->
-<!--                                     alt="Khong hien hinh anh" />-->
-<!--                                <a href="">-->
-<!--                                    <h6 th:text="${product.name}"></h6>-->
-<!--                                </a>-->
-<!--                                <h6 th:text="${product.price_near}"><p th:text="${product.unit}"></p></h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                            <div class="col" style="padding-top: 40px;padding-left: 5px">-->
-<!--                                <img th:src="@{/Frontend/images/lecheeky.jpg}" alt="" width="200px">-->
-<!--                                <a href="">-->
-<!--                                    <h6>Lê Hà Giang </h6>-->
-<!--                                </a>-->
-<!--                                <h6>60000₫/1kg</h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col" style="padding-top: 40px">-->
-<!--                                <img th:src="@{/Frontend/images/taocosmic.jpg}" alt="" width="200px">-->
-<!--                                <a href="">-->
-<!--                                    <h6>Táo Yên Bái</h6>-->
-<!--                                </a>-->
-<!--                                <h6>70000₫/1kg</h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col" style="padding-top: 40px">-->
-<!--                                <img th:src="@{/Frontend/images/flash2.jpg}" alt="" width="200px">-->
-<!--                                <a href="">-->
-<!--                                    <h6>Kiwwi</h6>-->
-<!--                                </a>-->
-<!--                                <h6>92500₫/1kg</h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col" style="padding-top: 40px;padding-left: 5px">-->
-<!--                                <img th:src="@{/Frontend/images/flash1.jpg}" alt="" width="200px">-->
-<!--                                <a href="">-->
-<!--                                    <h6>Nho Adora Uc</h6>-->
-<!--                                </a>-->
-<!--                                <h6>92500₫/1kg</h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col" style="padding-top: 40px;padding-left: 5px">-->
-<!--                                <img th:src="@{/Frontend/images/flash1.jpg}" alt="" width="200px">-->
-<!--                                <a href="">-->
-<!--                                    <h6>Nho Adora Uc</h6>-->
-<!--                                </a>-->
-<!--                                <h6>92500₫/1kg</h6>-->
-
-<!--                                <div class="add" style="padding-top: 10px;padding-left: 5px">-->
-<!--                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
-<!--                                    <span>THÊM VÀO GIỎ</span>-->
-
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                            <div th:each="product : ${listProduct}" class="col-sm-4">-->
-<!--                                <div class="row" style="display: flex">-->
-<!--                                    <div class="product-image-wrapper">-->
-<!--                                        <div class="single-products">-->
-<!--                                            <div class="productinfo text-center">-->
-<!--                                                <img th:src="@{'/images/' + ${product.urlImage} }"-->
-<!--                                                     alt="Khong hien hinh anh"/>-->
-<!--                                                &lt;!&ndash; <h2 th:text="${product.price}"></h2> &ndash;&gt;-->
-<!--                                                <h2 th:text="${#numbers.formatCurrency(product.price)}">-->
-<!--                                                </h2>-->
-<!--                                                <p th:text="${product.name}"></p>-->
-<!--                                                <a href="#" class="btn btn-default add-to-cart"><i-->
-<!--                                                        class="fa fa-shopping-cart"></i>Add to cart</a>-->
-<!--                                            </div>-->
-<!--                                            <div class="product-overlay">-->
-<!--                                                <div class="overlay-content">-->
-<!--                                                    <h2 th:text="${product.price}"></h2>-->
-<!--                                                    <p th:text="${product.name}"></p>-->
-<!--                                                    <a th:href="@{'/cart/add/' + ${product.id}}"-->
-<!--                                                       class="btn btn-default add-to-cart"><i-->
-<!--                                                            class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="choose">-->
-<!--                                            <ul class="nav nav-pills nav-justified">-->
-<!--                                                <li><a th:href="@{'/detailproduct/' + ${product.id}}"><i-->
-<!--                                                        class="fa fa-plus-square"></i>Xem chi tiết</a></li>-->
-<!--                                            </ul>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-                        <div class="phantrang" style="text-align: center; padding-top: 20px">
+<!--                        <div class="phantrang" style="text-align: center; padding-top: 20px">-->
                             <ul class="pagination">
                                 <li th:class=" ${page == 1}?'active':'' "><a
                                         th:href="@{/home/pages?page=1}">1</a></li>
@@ -216,15 +96,14 @@
                                 <li th:class="${page > 3}?'active':''"><a
                                         th:href="@{/home/pages(page=${page+1})}"> &raquo; </a></li>
                             </ul>
-                        </div>
-                    </div>
+<!--                        </div>-->
                     <!--features_items-->
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+<div th:replace="common/footer :: footer"></div>
 
 
 <script th:src="@{/Frontend/js/jquery.js}"></script>
