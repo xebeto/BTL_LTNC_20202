@@ -33,7 +33,7 @@ public class HomeController {
         List<CategoryDTO> categoryDTOs = categoryService.getList();
         request.setAttribute("listCategory", categoryDTOs);
 
-        int page = 1;
+        int page = 0;
         request.setAttribute("page", page);
         List<ProductDTO> productDTOs = productService.getList(page,12);
         request.setAttribute("listProduct", productDTOs);
