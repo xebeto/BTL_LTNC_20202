@@ -59,7 +59,7 @@ public class RegisterController {
             SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
             String to = accountDTO.getEmail();
             String subject = "Xác thực email";
-            String text = "Link xác nhận đăng kí tài khoản: http://localhost:8080/XacNhanEmail?email=" + accountDTO.getEmail() + "&key="
+            String text = "Link xác nhận đăng kí tài khoản: https://ltnc20202.herokuapp.com/XacNhanEmail?email=" + accountDTO.getEmail() + "&key="
                     + key;
             simpleMailMessage.setTo(to);
             simpleMailMessage.setSubject(subject);
