@@ -12,7 +12,7 @@
 			</div>
 			<div class="product-overlay">
 				<div class="overlay-content">
-					<h2 th:text="${product.price_near}"></h2>
+					<h2 th:text="${product.price}"></h2>
 					<p th:text="${product.name}"></p>
 					<a th:href="@{'/cart/add/' + ${product.id}}"
 						class="btn btn-default add-to-cart"><i
@@ -20,12 +20,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="choose">
-			<ul class="nav nav-pills nav-justified">
-				<li><a href=""><i class="fa fa-plus-square"></i>Add to
-						wishlist</a></li>
-				<li><a href=""><i class="fa fa-plus-square"></i>Add to
-						compare</a></li>
+		<div class="choose" >
+			<ul class="nav nav-pills nav-justified" >
+				<li ><a th:href="@{'/detailproduct/' + ${product.id}}" style="width: 100px"  ><i class="fa fa-plus-square"></i>Xem chi tiết</a></li>
 			</ul>
 		</div>
 	</div>

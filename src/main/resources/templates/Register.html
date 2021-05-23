@@ -22,10 +22,12 @@
         <label th:text="${erremail}" style="color:red;"></label>
         <br>
         <input class="in1" type="password" th:field="*{password}" placeholder="Password">
-
         <br>
         <input class="in1" type="password" placeholder="Re Password">
         <br>
+        <input class="in1"  type="text" th:field="*{fullname}" placeholder="Họ tên">
+        <input class="in1"  type="number" th:field="*{phone}" placeholder="Số điện thoại">
+        <input class="in1"  type="text" th:field="*{address}" placeholder="Địa chỉ">
         <input style="margin-left: 25px;" type="checkbox" name="Remember Me" id="Remember Me">
         <span style="font-size: 14px;">Remember Me</span>
         <br>
