@@ -43,6 +43,10 @@
                             <h3 class="card-title"><a th:href="@{/admin/QuanLySanPham/Them}">Thêm sản phẩm</a></h3>
                         </div>
                         <!-- /.card-header -->
+                        <div class="productinfo text-center">
+                            <img th:src="@{'/images/'+${product.url_image}}"
+                                 alt="Khong hien hinh anh">
+                        </div>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
